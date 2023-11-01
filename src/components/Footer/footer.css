@@ -1,0 +1,35 @@
+footer .links{
+    background-color: #22376a;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-flow: row wrap;
+}
+footer .links button{
+    color: white;
+    background-color: #36b25b !important;
+    margin: 5px;
+}
+button svg{
+font-size: 14px;
+}
+footer .links a{
+    color: white;
+    text-transform: capitalize;
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+}
+.links .item-4{
+    width: 25%;
+}
+
+footer p{
+    color: white;
+    font-size: 13px !important;
+    padding: 5px 0;
+}
+footer span{
+    color: #33a656;
+}
