@@ -110,3 +110,10 @@
     width: 100px;
     color: #26ad8e;
 }
+
+.income .MuiButton-contained{
+    background-color: #3cadd4 !important;
+}
+.income .MuiButton-outlined{
+    border-color: #3cadd4 !important;
+}

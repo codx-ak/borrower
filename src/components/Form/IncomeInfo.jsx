@@ -1,4 +1,4 @@
-import { Box, Button, TextField, Typography } from "@mui/material";
+import { Box, Button, FormControlLabel, Radio, RadioGroup, TextField, ToggleButton, ToggleButtonGroup, Typography } from "@mui/material";
 import React, { useContext, useState,} from "react";
 import { PageFunctions } from "../../page/MultiStepForm";
 import { useForm } from "react-hook-form";
@@ -14,10 +14,9 @@ const IncomeInfo = () => {
     updateFormData(data);
     PageAdd()
   };
-  
   return (
     <form action="" method="post" className="form-content" onSubmit={handleSubmit(onSubmit)}>
-      <Box>
+      <Box className='income'>
         <Typography variant="h6">
           What was the turnover from your last filed accounts?
         </Typography>
@@ -32,7 +31,6 @@ const IncomeInfo = () => {
           variant="standard"
           required
         />
-
         <Typography variant="h6">
           In the last financial year, did you make a profit or loss?
         </Typography>
@@ -53,7 +51,7 @@ const IncomeInfo = () => {
             Loss
           </Button>
         </Box>
-
+          <TextField sx={{opacity:0}} {...register('Qestion-8')} type="hidden" value={FinBtn}/>
         <Typography variant="h6">And by how much?</Typography>
 
         <Box>
@@ -85,6 +83,7 @@ const IncomeInfo = () => {
           >
             SAR 1m+
           </Button>
+          <TextField sx={{opacity:0}} {...register('Qestion-9')} type="hidden" value={priceBtn}/>
         </Box>
       </Box>
       <br />

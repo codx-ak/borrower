@@ -42,7 +42,7 @@ const BusinessActivities = () => {
               <TableRow hover>
                 <TableCell>
                   <FormControlLabel
-                    {...register("Qestion-8")}
+                    {...register("Qestion-10")}
                     value="Trading"
                     labelPlacement="start"
                     control={
@@ -61,7 +61,7 @@ const BusinessActivities = () => {
               <TableRow hover>
                 <TableCell>
                   <FormControlLabel
-                    {...register("Qestion-8")}
+                    {...register("Qestion-10")}
                     value="Manufacturing"
                     labelPlacement="start"
                     control={
@@ -80,7 +80,7 @@ const BusinessActivities = () => {
               <TableRow hover>
                 <TableCell>
                   <FormControlLabel
-                    {...register("Qestion-8")}
+                    {...register("Qestion-10")}
                     value="Wholesale"
                     labelPlacement="start"
                     control={
@@ -99,7 +99,7 @@ const BusinessActivities = () => {
               <TableRow hover>
                 <TableCell>
                   <FormControlLabel
-                    {...register("Qestion-8")}
+                    {...register("Qestion-10")}
                     value="Retail"
                     labelPlacement="start"
                     control={
@@ -118,7 +118,7 @@ const BusinessActivities = () => {
               <TableRow hover>
                 <TableCell>
                   <FormControlLabel
-                    {...register("Qestion-8")}
+                    {...register("Qestion-10")}
                     value="Restaurants"
                     labelPlacement="start"
                     control={
@@ -137,7 +137,7 @@ const BusinessActivities = () => {
               <TableRow hover>
                 <TableCell>
                   <FormControlLabel
-                    {...register("Qestion-8")}
+                    {...register("Qestion-10")}
                     value="Contracting"
                     labelPlacement="start"
                     control={
@@ -156,7 +156,7 @@ const BusinessActivities = () => {
               <TableRow hover>
                 <TableCell>
                   <FormControlLabel
-                  {...register("Qestion-8")}
+                  {...register("Qestion-10")}
                     value="Others"
                     labelPlacement="start"
                     control={
@@ -176,7 +176,7 @@ const BusinessActivities = () => {
           </Table>
         </RadioGroup>
         <TextField
-          {...register("Qestion-9")}
+          {...register("Qestion-11")}
           type="text"
           label="Please specify"
           InputLabelProps={{
