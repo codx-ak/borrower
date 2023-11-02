@@ -109,7 +109,7 @@ const AccountInfo = () => {
         </Button>
 
         <Button
-          type="button"
+          type="submit"
           onClick={handleSubmit}
           sx={{
             background: "#12b76a !important",
