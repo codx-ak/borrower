@@ -25,7 +25,7 @@ const FinanceDetails = () => {
         <Typography variant="h6">How much finance do you need?</Typography>
         <Box>
           <TextField
-            {...register("Q4")}
+            {...register("Qestion-4")}
             sx={{ marginBottom: 3 }}
             type="number"
             label="Finance period (In months)"
@@ -39,7 +39,7 @@ const FinanceDetails = () => {
         </Box>
         <Box>
           <TextField
-            {...register("Q5")}
+            {...register("Qestion-5")}
             type="number"
             label="Finance amount "
             sx={{ marginBottom: 3 }}
@@ -53,7 +53,7 @@ const FinanceDetails = () => {
         </Box>
         <Box>
           <TextField
-            {...register("q6")}
+            {...register("Qestion-6")}
             type="text"
             label="Finance reason"
             sx={{ marginBottom: 3 }}

@@ -29,7 +29,7 @@ import { useFormContext } from "../context/FormContext";
         </Typography>
         <RadioGroup row>
           <FormControlLabel
-          {...register("Q1")}
+          {...register("Qestion-1")}
             value="yes"
             control={
               <Radio
@@ -43,7 +43,7 @@ import { useFormContext } from "../context/FormContext";
             label="Yes"
           />
           <FormControlLabel
-          {...register("Q1")}
+          {...register("Qestion-1")}
             value="no"
             control={
               <Radio
@@ -63,7 +63,7 @@ import { useFormContext } from "../context/FormContext";
         </Typography>
         <RadioGroup row>
           <FormControlLabel
-          {...register("Q2")}
+          {...register("Qestion-2")}
             value="yes"
             control={
               <Radio
@@ -77,7 +77,7 @@ import { useFormContext } from "../context/FormContext";
             label="Yes"
           />
           <FormControlLabel
-          {...register("Q2")}
+          {...register("Qestion-2")}
             value="no"
             control={
               <Radio

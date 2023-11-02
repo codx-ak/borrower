@@ -27,7 +27,7 @@ const CommercialInfo = () => {
         </Typography>
 
         <TextField
-          {...register("Q10")}
+          {...register("Qestion-10")}
           type="number"
           label="CR number"
           InputLabelProps={{

@@ -14,7 +14,7 @@ const IncomeInfo = () => {
     updateFormData(data);
     PageAdd()
   };
-
+  
   return (
     <form action="" method="post" className="form-content" onSubmit={handleSubmit(onSubmit)}>
       <Box>
@@ -22,7 +22,7 @@ const IncomeInfo = () => {
           What was the turnover from your last filed accounts?
         </Typography>
         <TextField
-        {...register('Q7')}
+        {...register('Qestion-7')}
         type="number"
           label="Amount"
           InputLabelProps={{

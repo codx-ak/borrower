@@ -42,7 +42,7 @@ const AccountInfo = () => {
         </Typography>
         <Box>
           <TextField
-            {...register("Q11")}
+            {...register("Qestion-11")}
             sx={{ mb: 2 }}
             type="email"
             label="Email"
@@ -57,7 +57,7 @@ const AccountInfo = () => {
         </Box>
         <Box>
           <TextField
-            {...register("Q12")}
+            {...register("Qestion-12")}
             sx={{ mb: 2 }}
             type="number"
             label="Mobile"
@@ -72,7 +72,7 @@ const AccountInfo = () => {
         <Box>
           <TextField
             type="password"
-            {...register("Q13")}
+            {...register("Qestion-13")}
             sx={{ mb: 2 }}
             label="Password"
             InputLabelProps={{
@@ -86,7 +86,7 @@ const AccountInfo = () => {
         <Box>
           <TextField
             type="password"
-            {...register("Q14")}
+            {...register("Qestion-14")}
             sx={{ mb: 2 }}
             label="Confirm Password"
             InputLabelProps={{

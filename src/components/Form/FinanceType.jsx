@@ -34,7 +34,7 @@ const FinanceType = () => {
             <TableRow hover>
               <TableCell>
                 <FormControlLabel
-                {...register("Q3")}
+                {...register("Qestion-3")}
                   value="inventory"
                   labelPlacement="start"
                   control={
@@ -53,7 +53,7 @@ const FinanceType = () => {
             <TableRow hover>
               <TableCell>
                 <FormControlLabel
-                {...register("Q3")}
+                {...register("Qestion-3")}
                   value="pos"
                   labelPlacement="start"
                   control={
@@ -72,7 +72,7 @@ const FinanceType = () => {
             <TableRow hover>
               <TableCell>
                 <FormControlLabel
-                {...register("Q3")}
+                {...register("Qestion-3")}
                   value="term"
                   labelPlacement="start"
                   control={
@@ -91,7 +91,7 @@ const FinanceType = () => {
             <TableRow hover>
               <TableCell>
                 <FormControlLabel
-                {...register("Q3")}
+                {...register("Qestion-3")}
                   value="invoice"
                   labelPlacement="start"
                   control={
