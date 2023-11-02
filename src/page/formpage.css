@@ -71,13 +71,13 @@
 .left-steps p::after{
     content: '';
     width: 1.5px;
-    height: 85%;
+    height: 82%;
     background-color: gray;
     position: absolute;
-    top: 60%;
+    bottom:53%;
     left: 5px;
 }
-.left-steps p:last-child::after{
+.left-steps p:first-child::after{
     display: none;
 }
 
@@ -85,6 +85,9 @@
     content: '◉';
     font-size: 15px;
     color: #26ad8e;
+}
+.left-steps .completed::after{
+    background-color: #26ad8e;
 }
 .left-steps .completed{
     color: #26ad8e;
@@ -99,4 +102,7 @@
     content: '◉';
     font-size: 15px;
     color: #d38109;
+}
+.left-steps p[aria-current='true']::after{
+    background-color: #d38109;
 }

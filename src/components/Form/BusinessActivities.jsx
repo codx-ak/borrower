@@ -163,7 +163,7 @@ const BusinessActivities = () => {
         </RadioGroup>
         <TextField
         onChange={handleQ11}
-        type="number"
+        type="text"
           label="Please specify"
           InputLabelProps={{
             shrink: true,
