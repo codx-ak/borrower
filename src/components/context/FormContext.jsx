@@ -6,7 +6,7 @@ export const useFormContext = () => {
   return useContext(FormContext);
 };
 
-export  const FormProvider = ({ children }) => {
+export const FormProvider = ({ children }) => {
   const [formData, setFormData] = useState({});
 
   const updateFormData = (updatedData) => {

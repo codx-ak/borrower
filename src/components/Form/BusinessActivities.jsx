@@ -23,155 +23,160 @@ const BusinessActivities = () => {
 
   const onSubmit = (data) => {
     updateFormData(data);
-    PageAdd()
+    PageAdd();
   };
   return (
-    <form action="" method="post" className="form-content" onSubmit={handleSubmit(onSubmit)}>
+    <form
+      action=""
+      method="post"
+      className="form-content"
+      onSubmit={handleSubmit(onSubmit)}
+    >
       <Box>
-        <Typography sx={{padding:'0 !important'}} variant="h6">
+        <Typography sx={{ padding: "0 !important" }} variant="h6">
           What best describes your business activity?
         </Typography>
         <RadioGroup>
           <Table sx={{ mb: 1 }}>
             <TableBody>
-            <TableRow hover>
-              <TableCell>
-                <FormControlLabel
-                {...register('Q8')}
-                  value="Trading"
-                  labelPlacement="start"
-                  control={
-                    <Radio
-                      sx={{
-                        "&.Mui-checked": {
-                          color: "#26ad8e",
-                        },
-                      }}
-                    />
-                  }
-                  label="Trading"
-                />
-              </TableCell>
-            </TableRow>
-            <TableRow hover>
-              <TableCell>
-                <FormControlLabel
-                {...register('Q8')}
-                  value="Manufacturing"
-                  labelPlacement="start"
-                  control={
-                    <Radio
-                      sx={{
-                        "&.Mui-checked": {
-                          color: "#26ad8e",
-                        },
-                      }}
-                    />
-                  }
-                  label="Manufacturing"
-                />
-              </TableCell>
-            </TableRow>
-            <TableRow hover>
-              <TableCell>
-                <FormControlLabel
-                {...register('Q8')}
-                  value="Wholesale"
-                  labelPlacement="start"
-                  control={
-                    <Radio
-                      sx={{
-                        "&.Mui-checked": {
-                          color: "#26ad8e",
-                        },
-                      }}
-                    />
-                  }
-                  label="Wholesale"
-                />
-              </TableCell>
-            </TableRow>
-            <TableRow hover>
-              <TableCell>
-                <FormControlLabel
-              {...register('Q8')}
-                  value="Retail"
-                  labelPlacement="start"
-                  control={
-                    <Radio
-                      sx={{
-                        "&.Mui-checked": {
-                          color: "#26ad8e",
-                        },
-                      }}
-                    />
-                  }
-                  label="Retail"
-                />
-              </TableCell>
-            </TableRow>
-            <TableRow hover>
-              <TableCell>
-                <FormControlLabel
-                {...register('Q8')}
-                  value="Restaurants"
-                  labelPlacement="start"
-                  control={
-                    <Radio
-                      sx={{
-                        "&.Mui-checked": {
-                          color: "#26ad8e",
-                        },
-                      }}
-                    />
-                  }
-                  label="Restaurants"
-                />
-              </TableCell>
-            </TableRow>
-            <TableRow hover>
-              <TableCell>
-                <FormControlLabel
-                {...register('Q8')}
-                  value="Contracting"
-                  labelPlacement="start"
-                  control={
-                    <Radio
-                      sx={{
-                        "&.Mui-checked": {
-                          color: "#26ad8e",
-                        },
-                      }}
-                    />
-                  }
-                  label="Contracting"
-                />
-              </TableCell>
-            </TableRow>
-            <TableRow hover>
-              <TableCell>
-                <FormControlLabel
-                  value="Others"
-                  labelPlacement="start"
-                  control={
-                    <Radio
-                      sx={{
-                        "&.Mui-checked": {
-                          color: "#26ad8e",
-                        },
-                      }}
-                    />
-                  }
-                  label="Others"
-                />
-              </TableCell>
-            </TableRow>
+              <TableRow hover>
+                <TableCell>
+                  <FormControlLabel
+                    {...register("Q8")}
+                    value="Trading"
+                    labelPlacement="start"
+                    control={
+                      <Radio
+                        sx={{
+                          "&.Mui-checked": {
+                            color: "#26ad8e",
+                          },
+                        }}
+                      />
+                    }
+                    label="Trading"
+                  />
+                </TableCell>
+              </TableRow>
+              <TableRow hover>
+                <TableCell>
+                  <FormControlLabel
+                    {...register("Q8")}
+                    value="Manufacturing"
+                    labelPlacement="start"
+                    control={
+                      <Radio
+                        sx={{
+                          "&.Mui-checked": {
+                            color: "#26ad8e",
+                          },
+                        }}
+                      />
+                    }
+                    label="Manufacturing"
+                  />
+                </TableCell>
+              </TableRow>
+              <TableRow hover>
+                <TableCell>
+                  <FormControlLabel
+                    {...register("Q8")}
+                    value="Wholesale"
+                    labelPlacement="start"
+                    control={
+                      <Radio
+                        sx={{
+                          "&.Mui-checked": {
+                            color: "#26ad8e",
+                          },
+                        }}
+                      />
+                    }
+                    label="Wholesale"
+                  />
+                </TableCell>
+              </TableRow>
+              <TableRow hover>
+                <TableCell>
+                  <FormControlLabel
+                    {...register("Q8")}
+                    value="Retail"
+                    labelPlacement="start"
+                    control={
+                      <Radio
+                        sx={{
+                          "&.Mui-checked": {
+                            color: "#26ad8e",
+                          },
+                        }}
+                      />
+                    }
+                    label="Retail"
+                  />
+                </TableCell>
+              </TableRow>
+              <TableRow hover>
+                <TableCell>
+                  <FormControlLabel
+                    {...register("Q8")}
+                    value="Restaurants"
+                    labelPlacement="start"
+                    control={
+                      <Radio
+                        sx={{
+                          "&.Mui-checked": {
+                            color: "#26ad8e",
+                          },
+                        }}
+                      />
+                    }
+                    label="Restaurants"
+                  />
+                </TableCell>
+              </TableRow>
+              <TableRow hover>
+                <TableCell>
+                  <FormControlLabel
+                    {...register("Q8")}
+                    value="Contracting"
+                    labelPlacement="start"
+                    control={
+                      <Radio
+                        sx={{
+                          "&.Mui-checked": {
+                            color: "#26ad8e",
+                          },
+                        }}
+                      />
+                    }
+                    label="Contracting"
+                  />
+                </TableCell>
+              </TableRow>
+              <TableRow hover>
+                <TableCell>
+                  <FormControlLabel
+                    value="Others"
+                    labelPlacement="start"
+                    control={
+                      <Radio
+                        sx={{
+                          "&.Mui-checked": {
+                            color: "#26ad8e",
+                          },
+                        }}
+                      />
+                    }
+                    label="Others"
+                  />
+                </TableCell>
+              </TableRow>
             </TableBody>
           </Table>
         </RadioGroup>
         <TextField
-        {...register('Q9')}
-        type="text"
+          {...register("Q9")}
+          type="text"
           label="Please specify"
           InputLabelProps={{
             shrink: true,

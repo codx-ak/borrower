@@ -1,4 +1,4 @@
-import { Box,  Card, Typography } from "@mui/material";
+import { Box, Card, Typography } from "@mui/material";
 import React, { createContext, useState } from "react";
 import "./formpage.css";
 import MainForm from "../components/Form/MainForm";
@@ -73,7 +73,7 @@ const MultiStepForm = () => {
         </Box>
         <Box className="right-form">
           <PageFunctions.Provider value={[PageAdd, PageMin]}>
-              <MainForm value={page} />
+            <MainForm value={page} />
           </PageFunctions.Provider>
         </Box>
       </Card>

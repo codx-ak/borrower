@@ -1,4 +1,4 @@
-import { Box, Button,  TextField, Typography } from "@mui/material";
+import { Box, Button, TextField, Typography } from "@mui/material";
 import React, { useContext } from "react";
 import { PageFunctions } from "../../page/MultiStepForm";
 import { useForm } from "react-hook-form";
@@ -11,55 +11,59 @@ const FinanceDetails = () => {
 
   const onSubmit = (data) => {
     updateFormData(data);
-    PageAdd()
+    PageAdd();
   };
 
   return (
-    <form action="" method="post" className="form-content" onSubmit={handleSubmit(onSubmit)}>
+    <form
+      action=""
+      method="post"
+      className="form-content"
+      onSubmit={handleSubmit(onSubmit)}
+    >
       <Box>
         <Typography variant="h6">How much finance do you need?</Typography>
         <Box>
-        <TextField
-        {...register('Q4')}
-          sx={{ marginBottom: 3 }}
-          type="number"
-          label="Finance period (In months)"
-          InputLabelProps={{
-            shrink: true,
-          }}
-          color="success"
-          variant="standard"
-          required
-        />
+          <TextField
+            {...register("Q4")}
+            sx={{ marginBottom: 3 }}
+            type="number"
+            label="Finance period (In months)"
+            InputLabelProps={{
+              shrink: true,
+            }}
+            color="success"
+            variant="standard"
+            required
+          />
         </Box>
         <Box>
-
-        <TextField
-        {...register('Q5')}
-        type="number"
-          label="Finance amount "
-          sx={{ marginBottom: 3 }}
-          InputLabelProps={{
-            shrink: true,
-          }}
-          color="success"
-          variant="standard"
-          required
-        />
+          <TextField
+            {...register("Q5")}
+            type="number"
+            label="Finance amount "
+            sx={{ marginBottom: 3 }}
+            InputLabelProps={{
+              shrink: true,
+            }}
+            color="success"
+            variant="standard"
+            required
+          />
         </Box>
         <Box>
-        <TextField
-        {...register("q6")}
-        type="text"
-          label="Finance reason"
-          sx={{ marginBottom: 3 }}
-          InputLabelProps={{
-            shrink: true,
-          }}
-          color="success"
-          variant="standard"
-          required
-        />
+          <TextField
+            {...register("q6")}
+            type="text"
+            label="Finance reason"
+            sx={{ marginBottom: 3 }}
+            InputLabelProps={{
+              shrink: true,
+            }}
+            color="success"
+            variant="standard"
+            required
+          />
         </Box>
       </Box>
       <Box className="Form-Btn">
