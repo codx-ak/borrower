@@ -6,13 +6,13 @@ import {
   Typography,
 } from "@mui/material";
 import React, { useContext } from "react";
-import { PageFunctions } from "../../page/MultiStepForm";
 import { FormData } from "../context/FormState";
+import { PageFunctions } from "../../page/MultiStepForm";
 
 const AccountInfo = () => {
-  const [ PageAdd] = useContext(PageFunctions);
-  const FormModel = useContext(FormData);
 
+  const FormModel = useContext(FormData);
+  const [,PageMin] = useContext(PageFunctions);
   function handleQ13(data) {
     FormModel.AccountInfoDt.Q13 = data.target.value;
   }
@@ -93,7 +93,7 @@ const AccountInfo = () => {
       <Box className="Form-Btn">
         <Button
           type="button"
-          onClick={PageAdd}
+          onClick={PageMin}
           sx={{
             background: "#8b8b8b !important",
             fontWeight: "bold",
@@ -105,7 +105,7 @@ const AccountInfo = () => {
         </Button>
 
         <Button
-          type="submit"
+          type="button"
           onClick={handleSubmit}
           sx={{
             background: "#12b76a !important",
@@ -114,7 +114,7 @@ const AccountInfo = () => {
           }}
           variant="contained"
         >
-          Submit
+          Next
         </Button>
       </Box>
     </FormControl>
