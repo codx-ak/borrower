@@ -10,7 +10,7 @@ const Footer = () => {
     <footer>
       <Box className='links'>
         <Box className='item-1'>
-        <img width='auto' height={80} src={Logo} alt="Footer Logo" />
+        <img width='100%' height={80} src={Logo} alt="Footer Logo" />
         <Box>
         <IconButton ><AiFillFacebook/></IconButton>
         <IconButton ><TiSocialTwitter/></IconButton>

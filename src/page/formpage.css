@@ -8,7 +8,6 @@
 }
 
 .form-page .form-container{
-    padding: 20px;
     width: 750px;
     height: 420px;
     overflow: hidden;
@@ -16,23 +15,24 @@
     display: flex;
 }
 .form-page .left-steps{
+    padding: 10px 20px;
     height: 100%;
-    width: 200px !important;
+    width: 250px;
     border-right: 1px solid gray;
 }
 .form-page .right-form{
-    height: 100%;
-    padding: 10px 25px;  
+    width: 100%;
+    padding: 10px 25px;
 }
 .form-content{
     height: 100%;
     display: flex;
     flex-flow: column;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-around;
 }
-.right-form h6{
+.form-page h6{
     padding: 15px 0;
+    font-weight: 600;
 }
 .right-form td label{
     display: flex;
@@ -54,14 +54,14 @@
 }
 .left-steps p{
     color: gray;
-    font-size: 15px;
     text-wrap: nowrap;
-    padding: 10px 0;
+    padding: 5px 0;
     position: relative;
 }
 .left-steps P::before{
     content: '○';
     font-size: 20px;
+    overflow: hidden;
     width: 10px;
     height: 10px;
     padding-right: 15px;
@@ -69,10 +69,10 @@
 .left-steps p::after{
     content: '';
     width: 1.5px;
-    height: 82%;
+    height: 80%;
     background-color: gray;
     position: absolute;
-    bottom:53%;
+    bottom:56%;
     left: 5px;
 }
 .left-steps p:first-child::after{
@@ -103,4 +103,10 @@
 }
 .left-steps p[aria-current='true']::after{
     background-color: #d38109;
+}
+
+.success-svg{
+    height: 100px;
+    width: 100px;
+    color: #26ad8e;
 }

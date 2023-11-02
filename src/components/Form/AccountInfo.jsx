@@ -1,18 +1,34 @@
-import { Box, Button, TextField, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Dialog,
+  DialogContent,
+  TextField,
+  Typography,
+} from "@mui/material";
 import React, { useContext } from "react";
 import { PageFunctions } from "../../page/MultiStepForm";
 import { useForm } from "react-hook-form";
 import { useFormContext } from "../context/FormContext";
-
+import { TiTick } from "react-icons/ti";
 const AccountInfo = () => {
   const { register, handleSubmit } = useForm();
   const { updateFormData } = useFormContext();
   const [, PageMin] = useContext(PageFunctions);
+  const [open, setOpen] = React.useState(false);
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   const onSubmit = (data) => {
     updateFormData(data);
-    alert("Form Sumitted!");
+    handleClickOpen();
   };
+
   return (
     <form
       action=""
@@ -105,9 +121,24 @@ const AccountInfo = () => {
           }}
           variant="contained"
         >
-          Next
+          Sumbit
         </Button>
       </Box>
+      <Dialog open={open} onClose={handleClose}>
+        <DialogContent
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            flexDirection: "column",
+            gap: 5,
+            padding: "50px 100px",
+          }}
+        >
+          <TiTick className="success-svg" />
+          Form Submited Successfully!
+        </DialogContent>
+      </Dialog>
     </form>
   );
 };
