@@ -1,5 +1,10 @@
-import { Box, Button, FormControlLabel, Radio, RadioGroup, TextField, ToggleButton, ToggleButtonGroup, Typography } from "@mui/material";
-import React, { useContext, useState,} from "react";
+import {
+  Box,
+  Button,
+  TextField,
+  Typography,
+} from "@mui/material";
+import React, { useContext, useState } from "react";
 import { PageFunctions } from "../../page/MultiStepForm";
 import { useForm } from "react-hook-form";
 import { useFormContext } from "../context/FormContext";
@@ -8,21 +13,26 @@ const IncomeInfo = () => {
   const { register, handleSubmit } = useForm();
   const { updateFormData } = useFormContext();
   const [PageAdd, PageMin] = useContext(PageFunctions);
-  const [FinBtn,setFin]=useState('Profit')
-  const [priceBtn,setPrice]=useState('SAR 0 - 50k')
+  const [FinBtn, setFin] = useState("Profit");
+  const [priceBtn, setPrice] = useState("SAR 0 - 50k");
   const onSubmit = (data) => {
     updateFormData(data);
-    PageAdd()
+    PageAdd();
   };
   return (
-    <form action="" method="post" className="form-content" onSubmit={handleSubmit(onSubmit)}>
-      <Box className='income'>
+    <form
+      action=""
+      method="post"
+      className="form-content"
+      onSubmit={handleSubmit(onSubmit)}
+    >
+      <Box className="income">
         <Typography variant="h6">
           What was the turnover from your last filed accounts?
         </Typography>
         <TextField
-        {...register('Qestion-7')}
-        type="number"
+          {...register("Qestion-7")}
+          type="number"
           label="Amount"
           InputLabelProps={{
             shrink: true,
@@ -51,7 +61,12 @@ const IncomeInfo = () => {
             Loss
           </Button>
         </Box>
-          <TextField sx={{opacity:0}} {...register('Qestion-8')} type="hidden" value={FinBtn}/>
+        <TextField
+          sx={{ opacity: 0 }}
+          {...register("Qestion-8")}
+          type="hidden"
+          value={FinBtn}
+        />
         <Typography variant="h6">And by how much?</Typography>
 
         <Box>
@@ -83,7 +98,12 @@ const IncomeInfo = () => {
           >
             SAR 1m+
           </Button>
-          <TextField sx={{opacity:0}} {...register('Qestion-9')} type="hidden" value={priceBtn}/>
+          <TextField
+            sx={{ opacity: 0 }}
+            {...register("Qestion-9")}
+            type="hidden"
+            value={priceBtn}
+          />
         </Box>
       </Box>
       <br />
