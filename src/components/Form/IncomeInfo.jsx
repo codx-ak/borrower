@@ -20,6 +20,7 @@ const IncomeInfo = () => {
           What was the turnover from your last filed accounts?
         </Typography>
         <TextField
+        type="number"
         onChange={handleQ7}
           label="Amount"
           InputLabelProps={{

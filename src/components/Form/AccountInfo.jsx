@@ -40,6 +40,7 @@ const AccountInfo = () => {
       <TextField
       onChange={handleQ13}
         sx={{ mb: 2 }}
+        type="email"
         label="Email"
         InputLabelProps={{
           shrink: true,
@@ -54,6 +55,7 @@ const AccountInfo = () => {
       <TextField
       onChange={handleQ14}
         sx={{ mb: 2 }}
+        type="number"
         label="Mobile"
         InputLabelProps={{
           shrink: true,
@@ -65,6 +67,7 @@ const AccountInfo = () => {
       </Box>
       <Box>
       <TextField
+      type="password"
       onChange={handleQ15}
         sx={{ mb: 2 }}
         label="Password"
@@ -78,6 +81,7 @@ const AccountInfo = () => {
       </Box>
       <Box>
       <TextField
+      type="password"
       onChange={handleQ16}
         sx={{ mb: 2 }}
         label="Confirm Password"

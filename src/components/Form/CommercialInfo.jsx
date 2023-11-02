@@ -25,6 +25,7 @@ const CommercialInfo = () => {
 
       <TextField
       onChange={handleQ12}
+      type="number"
         label="CR number"
         InputLabelProps={{
           shrink: true,

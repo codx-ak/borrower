@@ -23,6 +23,7 @@ const FinanceDetails = () => {
         <Box>
         <TextField
           sx={{ marginBottom: 3 }}
+          type="number"
           onChange={handleQ4}
           label="Finance period (In months)"
           InputLabelProps={{
@@ -36,6 +37,7 @@ const FinanceDetails = () => {
         <Box>
 
         <TextField
+        type="number"
         onChange={handleQ5}
           label="Finance amount "
           sx={{ marginBottom: 3 }}
@@ -49,6 +51,7 @@ const FinanceDetails = () => {
         </Box>
         <Box>
         <TextField
+        type="text"
         onChange={handleQ6}
           label="Finance reason"
           sx={{ marginBottom: 3 }}
