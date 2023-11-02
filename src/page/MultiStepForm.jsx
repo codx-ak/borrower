@@ -4,7 +4,7 @@ import "./formpage.css";
 import MainForm from "../components/Form/MainForm";
 export const PageFunctions = createContext();
 const MultiStepForm = () => {
-  const [page, setPage] = useState(7);
+  const [page, setPage] = useState(1);
 
   function PageAdd() {
     setPage((value) => value + 1);
