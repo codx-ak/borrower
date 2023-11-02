@@ -1,27 +1,29 @@
-import { Box, Button, FormControl, TextField, Typography } from "@mui/material";
-import React, { useContext,  useState } from "react";
+import { Box, Button, TextField, Typography } from "@mui/material";
+import React, { useContext, useState,} from "react";
 import { PageFunctions } from "../../page/MultiStepForm";
+import { useForm } from "react-hook-form";
+import { useFormContext } from "../context/FormContext";
 
 const IncomeInfo = () => {
-  const [FinBtn, setFin] = useState("Profit");
-  const [priceBtn, setPrice] = useState("SAR 0 - 50k");
-
+  const { register, handleSubmit } = useForm();
+  const { updateFormData } = useFormContext();
   const [PageAdd, PageMin] = useContext(PageFunctions);
-  const FormModel = useContext(FormData);
-
-  function handleQ7(data) {
-    FormModel.IncomeInfoDt.Q7 = data.target.value;
-  }
+  const [FinBtn,setFin]=useState('Profit')
+  const [priceBtn,setPrice]=useState('SAR 0 - 50k')
+  const onSubmit = (data) => {
+    updateFormData(data);
+    PageAdd()
+  };
 
   return (
-    <FormControl>
+    <form action="" method="post" className="form-content" onSubmit={handleSubmit(onSubmit)}>
       <Box>
         <Typography variant="h6">
           What was the turnover from your last filed accounts?
         </Typography>
         <TextField
+        {...register('Q7')}
         type="number"
-        onChange={handleQ7}
           label="Amount"
           InputLabelProps={{
             shrink: true,
@@ -101,8 +103,7 @@ const IncomeInfo = () => {
         </Button>
 
         <Button
-          type="button"
-          onClick={PageAdd}
+          type="submit"
           sx={{
             background: "#12b76a !important",
             fontWeight: "bold",
@@ -113,7 +114,7 @@ const IncomeInfo = () => {
           Next
         </Button>
       </Box>
-    </FormControl>
+    </form>
   );
 };
 

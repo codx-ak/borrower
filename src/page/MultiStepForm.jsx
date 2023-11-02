@@ -5,7 +5,7 @@ import MainForm from "../components/Form/MainForm";
 export const PageFunctions = createContext();
 const MultiStepForm = () => {
   const [page, setPage] = useState(1);
-  console.log(page);
+
   function PageAdd() {
     setPage((value) => value + 1);
   }
@@ -73,9 +73,7 @@ const MultiStepForm = () => {
         </Box>
         <Box className="right-form">
           <PageFunctions.Provider value={[PageAdd, PageMin]}>
-            <form action="" method="post">
               <MainForm value={page} />
-            </form>
           </PageFunctions.Provider>
         </Box>
       </Card>

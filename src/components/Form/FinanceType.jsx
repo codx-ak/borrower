@@ -1,35 +1,40 @@
 import {
   Box,
   Button,
-  FormControl,
   FormControlLabel,
   Radio,
   RadioGroup,
   Table,
+  TableBody,
   TableCell,
   TableRow,
   Typography,
 } from "@mui/material";
 import React, { useContext } from "react";
 import { PageFunctions } from "../../page/MultiStepForm";
-import { FormData } from "../context/FormState";
+import { useForm } from "react-hook-form";
+import { useFormContext } from "../context/FormContext";
 
 const FinanceType = () => {
+  const { register, handleSubmit } = useForm();
+  const { updateFormData } = useFormContext();
   const [PageAdd, PageMin] = useContext(PageFunctions);
-  const FormModel = useContext(FormData);
 
-  function handleQ3(data) {
-    FormModel.FinanceTypeDt.Q3 = data.target.value;
-  }
+  const onSubmit = (data) => {
+    updateFormData(data);
+    PageAdd()
+  };
   return (
-    <FormControl className="form-content">
+    <form action="" method="post" className="form-content" onSubmit={handleSubmit(onSubmit)}>
       <Box>
         <Typography variant="h6">What kind of finance you need?</Typography>
-        <RadioGroup onChange={handleQ3}>
+        <RadioGroup>
           <Table>
+            <TableBody>
             <TableRow hover>
               <TableCell>
                 <FormControlLabel
+                {...register("Q3")}
                   value="inventory"
                   labelPlacement="start"
                   control={
@@ -48,6 +53,7 @@ const FinanceType = () => {
             <TableRow hover>
               <TableCell>
                 <FormControlLabel
+                {...register("Q3")}
                   value="pos"
                   labelPlacement="start"
                   control={
@@ -66,6 +72,7 @@ const FinanceType = () => {
             <TableRow hover>
               <TableCell>
                 <FormControlLabel
+                {...register("Q3")}
                   value="term"
                   labelPlacement="start"
                   control={
@@ -84,6 +91,7 @@ const FinanceType = () => {
             <TableRow hover>
               <TableCell>
                 <FormControlLabel
+                {...register("Q3")}
                   value="invoice"
                   labelPlacement="start"
                   control={
@@ -99,6 +107,7 @@ const FinanceType = () => {
                 />
               </TableCell>
             </TableRow>
+            </TableBody>
           </Table>
         </RadioGroup>
       </Box>
@@ -117,8 +126,7 @@ const FinanceType = () => {
         </Button>
 
         <Button
-          type="button"
-          onClick={PageAdd}
+          type="submit"
           sx={{
             background: "#12b76a !important",
             fontWeight: "bold",
@@ -129,7 +137,7 @@ const FinanceType = () => {
           Next
         </Button>
       </Box>
-    </FormControl>
+    </form>
   );
 };
 

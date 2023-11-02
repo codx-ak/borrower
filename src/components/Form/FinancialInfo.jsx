@@ -1,34 +1,35 @@
 import {
   Box,
   Button,
-  FormControl,
   FormControlLabel,
   Radio,
   RadioGroup,
   Typography,
 } from "@mui/material";
-import React, { useContext } from "react";
+import { useForm } from "react-hook-form";
 import { PageFunctions } from "../../page/MultiStepForm";
-import { FormData } from "../context/FormState";
+import { useContext } from "react";
+import { useFormContext } from "../context/FormContext";
 
-const FinancialInfo = () => {
+ const FinanceForm = () => {
+  const { register, handleSubmit } = useForm();
+  const { updateFormData } = useFormContext();
   const [PageAdd] = useContext(PageFunctions);
-  const FormModel = useContext(FormData);
 
-  function handleQ1(data) {
-    FormModel.FinancialInfoDt.Q1 = data.target.value;
-  }
-  function handleQ2(data) {
-    FormModel.FinancialInfoDt.Q2 = data.target.value;
-  }
+  const onSubmit = (data) => {
+    updateFormData(data);
+    PageAdd()
+  };
+
   return (
-    <FormControl className="form-content">
+    <form action="" method="post" className="form-content" onSubmit={handleSubmit(onSubmit)}>
       <Box>
         <Typography variant="h6">
           Are you in business for more than two years ?
         </Typography>
-        <RadioGroup onChange={handleQ1} row>
+        <RadioGroup row>
           <FormControlLabel
+          {...register("Q1")}
             value="yes"
             control={
               <Radio
@@ -42,6 +43,7 @@ const FinancialInfo = () => {
             label="Yes"
           />
           <FormControlLabel
+          {...register("Q1")}
             value="no"
             control={
               <Radio
@@ -59,8 +61,9 @@ const FinancialInfo = () => {
         <Typography variant="h6">
           Do you have financial statement for the past 2 years?
         </Typography>
-        <RadioGroup onChange={handleQ2} row>
+        <RadioGroup row>
           <FormControlLabel
+          {...register("Q2")}
             value="yes"
             control={
               <Radio
@@ -74,6 +77,7 @@ const FinancialInfo = () => {
             label="Yes"
           />
           <FormControlLabel
+          {...register("Q2")}
             value="no"
             control={
               <Radio
@@ -90,8 +94,7 @@ const FinancialInfo = () => {
       </Box>
       <Box sx={{ alignSelf: "flex-end" }}>
         <Button
-          type="button"
-          onClick={PageAdd}
+          type="sumbit"
           sx={{
             background: "#12b76a !important",
             fontWeight: "bold",
@@ -102,8 +105,8 @@ const FinancialInfo = () => {
           Next
         </Button>
       </Box>
-    </FormControl>
+    </form>
   );
 };
 
-export default FinancialInfo;
+export default FinanceForm

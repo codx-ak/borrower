@@ -34,7 +34,6 @@ const FormState = ({children}) => {
             Q16:''
         }
     }
-console.log(FormModel);
   return (
     <FormData.Provider value={FormModel}>
         {children}

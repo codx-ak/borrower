@@ -1,30 +1,28 @@
-import { Box, Button, FormControl, TextField, Typography } from "@mui/material";
+import { Box, Button,  TextField, Typography } from "@mui/material";
 import React, { useContext } from "react";
 import { PageFunctions } from "../../page/MultiStepForm";
-import { FormData } from "../context/FormState";
+import { useForm } from "react-hook-form";
+import { useFormContext } from "../context/FormContext";
 
 const FinanceDetails = () => {
+  const { register, handleSubmit } = useForm();
+  const { updateFormData } = useFormContext();
   const [PageAdd, PageMin] = useContext(PageFunctions);
-  const FormModel = useContext(FormData);
 
-  function handleQ4(data) {
-    FormModel.FinanceDetailDt.Q4 = data.target.value;
-  }
-  function handleQ5(data) {
-    FormModel.FinanceDetailDt.Q5 = data.target.value;
-  }
-  function handleQ6(data) {
-    FormModel.FinanceDetailDt.Q6 = data.target.value;
-  }
+  const onSubmit = (data) => {
+    updateFormData(data);
+    PageAdd()
+  };
+
   return (
-    <FormControl className="form-content">
+    <form action="" method="post" className="form-content" onSubmit={handleSubmit(onSubmit)}>
       <Box>
         <Typography variant="h6">How much finance do you need?</Typography>
         <Box>
         <TextField
+        {...register('Q4')}
           sx={{ marginBottom: 3 }}
           type="number"
-          onChange={handleQ4}
           label="Finance period (In months)"
           InputLabelProps={{
             shrink: true,
@@ -37,8 +35,8 @@ const FinanceDetails = () => {
         <Box>
 
         <TextField
+        {...register('Q5')}
         type="number"
-        onChange={handleQ5}
           label="Finance amount "
           sx={{ marginBottom: 3 }}
           InputLabelProps={{
@@ -51,8 +49,8 @@ const FinanceDetails = () => {
         </Box>
         <Box>
         <TextField
+        {...register("q6")}
         type="text"
-        onChange={handleQ6}
           label="Finance reason"
           sx={{ marginBottom: 3 }}
           InputLabelProps={{
@@ -79,8 +77,7 @@ const FinanceDetails = () => {
         </Button>
 
         <Button
-          type="button"
-          onClick={PageAdd}
+          type="submit"
           sx={{
             background: "#12b76a !important",
             fontWeight: "bold",
@@ -91,7 +88,7 @@ const FinanceDetails = () => {
           Next
         </Button>
       </Box>
-    </FormControl>
+    </form>
   );
 };
 

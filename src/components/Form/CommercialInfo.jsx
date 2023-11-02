@@ -8,23 +8,28 @@ import {
 import React, { useContext } from "react";
 import { PageFunctions } from "../../page/MultiStepForm";
 import { FormData } from "../context/FormState";
+import { useForm } from "react-hook-form";
+import { useFormContext } from "../context/FormContext";
 
 const CommercialInfo = () => {
+  const { register, handleSubmit } = useForm();
+  const { updateFormData } = useFormContext();
   const [PageAdd, PageMin] = useContext(PageFunctions);
-  const FormModel = useContext(FormData);
 
-  function handleQ12(data) {
-    FormModel.CommercialInfoDt.Q12 = data.target.value;
+  const onSubmit = (data) => {
+    updateFormData(data);
+    PageAdd()
   }
+
   return (
-    <FormControl className="form-content">
+    <form action="" method="post" className="form-content" onSubmit={handleSubmit(onSubmit)}>
       <Box>
       <Typography mb={2} variant="h6">
         What s your commercial registration number?
       </Typography>
 
       <TextField
-      onChange={handleQ12}
+      {...register('Q10')}
       type="number"
         label="CR number"
         InputLabelProps={{
@@ -54,8 +59,7 @@ const CommercialInfo = () => {
         </Button>
 
         <Button
-          type="button"
-          onClick={PageAdd}
+          type="submit"
           sx={{
             background: "#12b76a !important",
             fontWeight: "bold",
@@ -66,7 +70,7 @@ const CommercialInfo = () => {
           Next
         </Button>
       </Box>
-    </FormControl>
+    </form>
     
   );
 };

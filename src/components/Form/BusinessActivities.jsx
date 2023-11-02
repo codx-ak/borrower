@@ -1,11 +1,11 @@
 import {
   Box,
   Button,
-  FormControl,
   FormControlLabel,
   Radio,
   RadioGroup,
   Table,
+  TableBody,
   TableCell,
   TableRow,
   TextField,
@@ -13,29 +13,31 @@ import {
 } from "@mui/material";
 import React, { useContext } from "react";
 import { PageFunctions } from "../../page/MultiStepForm";
-import { FormData } from "../context/FormState";
+import { useForm } from "react-hook-form";
+import { useFormContext } from "../context/FormContext";
 
 const BusinessActivities = () => {
+  const { register, handleSubmit } = useForm();
+  const { updateFormData } = useFormContext();
   const [PageAdd, PageMin] = useContext(PageFunctions);
-  const FormModel = useContext(FormData);
 
-  function handleQ10(data) {
-    FormModel.BusinessActivitieDt.Q10 = data.target.value;
-  }
-  function handleQ11(data) {
-    FormModel.BusinessActivitieDt.Q11 = data.target.value;
-  }
+  const onSubmit = (data) => {
+    updateFormData(data);
+    PageAdd()
+  };
   return (
-    <FormControl className="form-content">
+    <form action="" method="post" className="form-content" onSubmit={handleSubmit(onSubmit)}>
       <Box>
         <Typography sx={{padding:'0 !important'}} variant="h6">
           What best describes your business activity?
         </Typography>
-        <RadioGroup onChange={handleQ10}>
+        <RadioGroup>
           <Table sx={{ mb: 1 }}>
+            <TableBody>
             <TableRow hover>
               <TableCell>
                 <FormControlLabel
+                {...register('Q8')}
                   value="Trading"
                   labelPlacement="start"
                   control={
@@ -54,6 +56,7 @@ const BusinessActivities = () => {
             <TableRow hover>
               <TableCell>
                 <FormControlLabel
+                {...register('Q8')}
                   value="Manufacturing"
                   labelPlacement="start"
                   control={
@@ -72,6 +75,7 @@ const BusinessActivities = () => {
             <TableRow hover>
               <TableCell>
                 <FormControlLabel
+                {...register('Q8')}
                   value="Wholesale"
                   labelPlacement="start"
                   control={
@@ -90,6 +94,7 @@ const BusinessActivities = () => {
             <TableRow hover>
               <TableCell>
                 <FormControlLabel
+              {...register('Q8')}
                   value="Retail"
                   labelPlacement="start"
                   control={
@@ -108,6 +113,7 @@ const BusinessActivities = () => {
             <TableRow hover>
               <TableCell>
                 <FormControlLabel
+                {...register('Q8')}
                   value="Restaurants"
                   labelPlacement="start"
                   control={
@@ -126,6 +132,7 @@ const BusinessActivities = () => {
             <TableRow hover>
               <TableCell>
                 <FormControlLabel
+                {...register('Q8')}
                   value="Contracting"
                   labelPlacement="start"
                   control={
@@ -159,10 +166,11 @@ const BusinessActivities = () => {
                 />
               </TableCell>
             </TableRow>
+            </TableBody>
           </Table>
         </RadioGroup>
         <TextField
-        onChange={handleQ11}
+        {...register('Q9')}
         type="text"
           label="Please specify"
           InputLabelProps={{
@@ -188,8 +196,7 @@ const BusinessActivities = () => {
         </Button>
 
         <Button
-          type="button"
-          onClick={PageAdd}
+          type="submit"
           sx={{
             background: "#12b76a !important",
             fontWeight: "bold",
@@ -200,7 +207,7 @@ const BusinessActivities = () => {
           Next
         </Button>
       </Box>
-    </FormControl>
+    </form>
   );
 };
 

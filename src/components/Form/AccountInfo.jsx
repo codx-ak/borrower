@@ -1,44 +1,33 @@
 import {
   Box,
   Button,
-  FormControl,
   TextField,
   Typography,
 } from "@mui/material";
 import React, { useContext } from "react";
-import { FormData } from "../context/FormState";
 import { PageFunctions } from "../../page/MultiStepForm";
+import { useForm } from "react-hook-form";
+import { useFormContext } from "../context/FormContext";
 
 const AccountInfo = () => {
 
-  const FormModel = useContext(FormData);
-  const [,PageMin] = useContext(PageFunctions);
-  function handleQ13(data) {
-    FormModel.AccountInfoDt.Q13 = data.target.value;
-  }
-  function handleQ14(data) {
-    FormModel.AccountInfoDt.Q14 = data.target.value;
-  }
-  function handleQ15(data) {
-    FormModel.AccountInfoDt.Q15 = data.target.value;
-  }
-  function handleQ16(data) {
-    FormModel.AccountInfoDt.Q16 = data.target.value;
-  }
-  function handleSubmit(e){
-    e.preventDefault()
-    alert("form Submited!")
-    console.log(FormModel);
-  }
+  const { register, handleSubmit } = useForm();
+  const { updateFormData } = useFormContext();
+  const [, PageMin] = useContext(PageFunctions);
+
+  const onSubmit = (data) => {
+    updateFormData(data)
+    alert("Form Sumitted!")
+  };
   return (
-    <FormControl className="form-content">
+    <form action="" method="post" className="form-content" onSubmit={handleSubmit(onSubmit)}>
       <Box>
       <Typography sx={{ mb: 2 }} variant="h6">
         What s your account details?
       </Typography>
       <Box>
       <TextField
-      onChange={handleQ13}
+      {...register('Q11')}
         sx={{ mb: 2 }}
         type="email"
         label="Email"
@@ -53,7 +42,7 @@ const AccountInfo = () => {
       </Box>
       <Box>
       <TextField
-      onChange={handleQ14}
+      {...register('Q12')}
         sx={{ mb: 2 }}
         type="number"
         label="Mobile"
@@ -68,7 +57,7 @@ const AccountInfo = () => {
       <Box>
       <TextField
       type="password"
-      onChange={handleQ15}
+      {...register('Q13')}
         sx={{ mb: 2 }}
         label="Password"
         InputLabelProps={{
@@ -82,7 +71,7 @@ const AccountInfo = () => {
       <Box>
       <TextField
       type="password"
-      onChange={handleQ16}
+      {...register('Q14')}
         sx={{ mb: 2 }}
         label="Confirm Password"
         InputLabelProps={{
@@ -110,7 +99,6 @@ const AccountInfo = () => {
 
         <Button
           type="submit"
-          onClick={handleSubmit}
           sx={{
             background: "#12b76a !important",
             fontWeight: "bold",
@@ -121,7 +109,7 @@ const AccountInfo = () => {
           Next
         </Button>
       </Box>
-    </FormControl>
+    </form>
   );
 };
 
