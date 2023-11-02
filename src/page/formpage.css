@@ -55,6 +55,7 @@
 .left-steps p{
     color: gray;
     font-size: 15px;
+    text-wrap: nowrap;
     padding: 10px 0;
     position: relative;
 }
