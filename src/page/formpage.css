@@ -1,0 +1,102 @@
+.form-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 100%;
+    background:linear-gradient(to right,#3cadd4,#1fac79) ;
+}
+
+.form-page .form-container{
+    padding: 20px;
+    width: 750px;
+    height: 420px;
+    overflow: hidden;
+    border-radius: 10px;
+    display: flex;
+}
+.form-page .left-steps{
+    height: 100%;
+    width: 200px !important;
+    border-right: 1px solid gray;
+}
+.form-page .right-form{
+    height: 100%;
+    padding: 10px 25px;  
+}
+.right-form form{
+    width: 100%;
+    height: 100%;
+}
+.form-content{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.right-form h6{
+    padding: 15px 0;
+}
+.right-form td label{
+    display: flex;
+    justify-content: space-between;
+    width: 450px;
+    color: gray !important;
+}
+.right-form td{
+    padding:0;
+}
+.right-form input{
+    width: 450px;
+    color: gray;
+    padding: 10px;
+}
+.right-form button{
+    min-width: 100px;
+    margin: 5px;
+}
+.left-steps p{
+    color: gray;
+    font-size: 15px;
+    padding: 10px 0;
+    position: relative;
+}
+.left-steps P::before{
+    content: '○';
+    font-size: 20px;
+    width: 10px;
+    height: 10px;
+    padding-right: 15px;
+}
+.left-steps p::after{
+    content: '';
+    width: 1.5px;
+    height: 85%;
+    background-color: gray;
+    position: absolute;
+    top: 60%;
+    left: 5px;
+}
+.left-steps p:last-child::after{
+    display: none;
+}
+
+.left-steps .completed::before{
+    content: '◉';
+    font-size: 15px;
+    color: #26ad8e;
+}
+.left-steps .completed{
+    color: #26ad8e;
+}
+
+.Form-Btn{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.left-steps p[aria-current='true']::before,.left-steps p[aria-current='true']{
+    content: '◉';
+    font-size: 15px;
+    color: #d38109;
+}

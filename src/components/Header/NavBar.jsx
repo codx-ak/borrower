@@ -6,7 +6,7 @@ const NavBar = () => {
   return (
     <Box className='header'>
       <Box className='logo'>
-        <img width='auto' height={70} src={Logo} alt="Logo Image" />
+        <img width='auto' height={70} src={Logo} alt="Header Logo" />
       </Box>
       <nav>
         <Link href=''>Get Financed</Link>

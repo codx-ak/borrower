@@ -1,5 +1,5 @@
 import React from 'react'
-import {Box, Button, IconButton, Link, Typography} from '@mui/material'
+import {Box,IconButton, Link, Typography} from '@mui/material'
 import './footer.css'
 import Logo from '../../assets/logo-2.png'
 import {AiFillFacebook, AiFillLinkedin} from 'react-icons/ai'
@@ -10,7 +10,7 @@ const Footer = () => {
     <footer>
       <Box className='links'>
         <Box className='item-1'>
-        <img width='auto' height={80} src={Logo} alt="Logo Image" />
+        <img width='auto' height={80} src={Logo} alt="Footer Logo" />
         <Box>
         <IconButton ><AiFillFacebook/></IconButton>
         <IconButton ><TiSocialTwitter/></IconButton>
