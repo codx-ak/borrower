@@ -118,7 +118,7 @@
     border-color: #3cadd4 !important;
 }
 
-@media (max-width:470px) {
+@media (max-width:500px) {
     .form-page{
         height:70vh;
     }
