@@ -11,11 +11,17 @@ import { PageFunctions } from "../../page/MultiStepForm";
 import { useForm } from "react-hook-form";
 import { useFormContext } from "../context/FormContext";
 import { TiTick } from "react-icons/ti";
+
 const AccountInfo = () => {
+
   const { register, handleSubmit } = useForm();
   const { updateFormData } = useFormContext();
+
+  //page Function From Context
   const [, PageMin] = useContext(PageFunctions);
+  // Dialog Box State
   const [open, setOpen] = React.useState(false);
+
   const handleClickOpen = () => {
     setOpen(true);
   };
@@ -98,6 +104,8 @@ const AccountInfo = () => {
           />
         </Box>
       </Box>
+
+      
       <Box className="Form-Btn">
         <Button
           type="button"
@@ -124,6 +132,8 @@ const AccountInfo = () => {
           Sumbit
         </Button>
       </Box>
+
+      {/* Dialog Box For Form Submission Confirmation  */}
       <Dialog open={open} onClose={handleClose}>
         <DialogContent
           sx={{

@@ -8,6 +8,7 @@ import CommercialInfo from './CommercialInfo'
 import AccountInfo from './AccountInfo'
 
 const MainForm = ({value}) => {
+    // value From MultiStepForm Component 
     switch(value){
         case 1:
             return <FinancialInfo/>
