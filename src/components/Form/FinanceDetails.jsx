@@ -26,7 +26,7 @@ const FinanceDetails = () => {
         <Box>
           <TextField
             {...register("Qestion-4")}
-            sx={{ marginBottom: 3 }}
+            sx={{ marginBottom: 1 }}
             type="number"
             label="Finance period (In months)"
             InputLabelProps={{
@@ -42,7 +42,7 @@ const FinanceDetails = () => {
             {...register("Qestion-5")}
             type="number"
             label="Finance amount "
-            sx={{ marginBottom: 3 }}
+            sx={{ marginBottom: 1 }}
             InputLabelProps={{
               shrink: true,
             }}
@@ -56,7 +56,7 @@ const FinanceDetails = () => {
             {...register("Qestion-6")}
             type="text"
             label="Finance reason"
-            sx={{ marginBottom: 3 }}
+            sx={{ marginBottom: 1 }}
             InputLabelProps={{
               shrink: true,
             }}

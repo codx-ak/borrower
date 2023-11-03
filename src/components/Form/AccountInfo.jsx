@@ -133,6 +133,7 @@ const AccountInfo = () => {
             flexDirection: "column",
             gap: 5,
             padding: "50px 100px",
+            textWrap: "nowrap"
           }}
         >
           <TiTick className="success-svg" />

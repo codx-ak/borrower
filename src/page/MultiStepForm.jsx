@@ -19,7 +19,7 @@ const MultiStepForm = () => {
           <Typography color="gray" variant="h6">
             Borrower registration
           </Typography>
-          <Box>
+          <Box className='Form-NavBar'>
             <Typography
               aria-current={page === 1}
               className={page > 1 ? "completed" : ""}

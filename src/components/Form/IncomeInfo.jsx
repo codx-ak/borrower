@@ -62,14 +62,14 @@ const IncomeInfo = () => {
           </Button>
         </Box>
         <TextField
-          sx={{ opacity: 0 }}
+          sx={{ display: 'none' }}
           {...register("Qestion-8")}
           type="hidden"
           value={FinBtn}
         />
         <Typography variant="h6">And by how much?</Typography>
 
-        <Box>
+        <Box className="price-Btn">
           <Button
             type="button"
             onClick={() => setPrice("SAR 0 - 50k")}
@@ -99,7 +99,7 @@ const IncomeInfo = () => {
             SAR 1m+
           </Button>
           <TextField
-            sx={{ opacity: 0 }}
+            sx={{ display:'none' }}
             {...register("Qestion-9")}
             type="hidden"
             value={priceBtn}

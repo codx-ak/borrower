@@ -81,7 +81,7 @@
 
 .left-steps .completed::before{
     content: '◉';
-    font-size: 15px;
+    font-size: 14px;
     color: #26ad8e;
 }
 .left-steps .completed::after{
@@ -98,7 +98,7 @@
 }
 .left-steps p[aria-current='true']::before,.left-steps p[aria-current='true']{
     content: '◉';
-    font-size: 15px;
+    font-size: 14px;
     color: #d38109;
 }
 .left-steps p[aria-current='true']::after{
@@ -116,4 +116,72 @@
 }
 .income .MuiButton-outlined{
     border-color: #3cadd4 !important;
+}
+
+@media (max-width:470px) {
+    .form-page{
+        height:70vh;
+    }
+    .form-page .form-container{
+        width: 90%;
+        height: fit-content;
+        flex-direction: column;
+    }
+    .form-page h6{
+        padding: 6px 0;
+        font-size: 14px;
+    }
+    .form-content {
+        width: fit-content;
+    }
+    .right-form td label {
+        width: 300px;
+    }
+    .right-form input{
+        width: 300px;
+        padding: 5px;
+    }
+    .income .price-Btn{
+        display: flex;
+    overflow-x: scroll;
+    width: 300px;
+    }
+    .right-form button{
+        min-width: fit-content;
+    }
+    .form-page .left-steps{
+        height: 25%;
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid gray;
+    }
+    .Form-NavBar{
+        display: flex;
+        overflow-x: scroll;
+    }
+    .left-steps p::after {
+        width: 90%;
+        height: 1.5px;
+        top: 15%;
+        left: -40%;
+    }
+    .left-steps p{
+        min-width: 100px;
+        height: 50px;
+        padding: 5px;
+        padding-top: 25px !important;
+    }
+    .left-steps P::before{
+        font-size: 15px;
+        width: 10px;
+        height: fit-content;
+        position: absolute;
+        bottom: 70%;
+        left: 50%;
+    }
+
+    ::-webkit-scrollbar{
+        /* width: 2px; */
+        height: 1.5px;
+    }
 }
